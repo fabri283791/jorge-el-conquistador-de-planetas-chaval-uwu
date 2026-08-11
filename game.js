@@ -1,6 +1,6 @@
 const canvas=document.querySelector('#game'),ctx=canvas.getContext('2d');
 const W=canvas.width,H=canvas.height,GROUND=454,GRAVITY=.72;
-const platforms=[{x:125,y:390,w:150,h:14},{x:400,y:350,w:155,h:14},{x:685,y:397,w:145,h:14}];
+const platforms=[{x:25,y:420,w:80,h:14},{x:125,y:390,w:150,h:14},{x:292,y:415,w:85,h:14},{x:400,y:350,w:155,h:14},{x:575,y:408,w:85,h:14},{x:685,y:397,w:145,h:14},{x:845,y:375,w:92,h:14}];
 const coinsEl=document.querySelector('#coins'),ammoEl=document.querySelector('#ammo'),livesEl=document.querySelector('#lives'),levelEl=document.querySelector('#level'),timeEl=document.querySelector('#time');
 const overlay=document.querySelector('#overlay'),startButton=document.querySelector('#start'),musicFrame=document.querySelector('#music-player'),shotFrame=document.querySelector('#shot-player'),musicToggle=document.querySelector('#music-toggle');
 const keys={},enemyImage=new Image(),heroImage=new Image(); enemyImage.src='shou-tucker.png';heroImage.src='jorge.png';
