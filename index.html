@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Las flipantes de aventuras del Jorge el dictador</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hud" aria-label="Marcador">
+        <div><span>MONEDAS</span><strong id="coins">00</strong></div>
+        <div><span>VIDAS</span><strong id="lives">03</strong></div>
+        <div><span>RONDA</span><strong id="level">01</strong></div>
+        <div><span>TIEMPO</span><strong id="time">120</strong></div>
+      </section>
+
+      <canvas id="game" width="960" height="540" aria-label="Juego de plataformas Salto Estelar"></canvas>
+
+      <section class="controls" aria-label="Controles">
+        <div class="control-group">
+          <button data-key="ArrowLeft" aria-label="Mover a la izquierda">◀</button>
+          <button data-key="ArrowRight" aria-label="Mover a la derecha">▶</button>
+        </div>
+        <div class="control-group">
+          <button class="attack" data-key="KeyF" aria-label="Golpear">F</button>
+          <button class="jump" data-key="Space" aria-label="Saltar">SALTA</button>
+        </div>
+      </section>
+      <button id="music-toggle" class="music-toggle" aria-label="Silenciar música">♫ Música</button>
+      <p class="hint">Usa <kbd>←</kbd> <kbd>→</kbd>, <kbd>espacio</kbd> y <kbd>F</kbd> para golpear</p>
+    </main>
+
+    <iframe id="music-player" title="Música de fondo" allow="autoplay; encrypted-media" hidden></iframe>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <p class="eyebrow">RONDA DE SUPERVIVENCIA</p>
+        <h1>Las flipantes de aventuras del Jorge el dictador</h1>
+        <p>Elimina a todos los enemigos para pasar a la siguiente ronda.</p>
+        <button id="start">JUGAR</button>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

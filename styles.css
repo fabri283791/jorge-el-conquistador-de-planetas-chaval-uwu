@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Press+Start+2P&display=swap');
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  min-height: 100vh; margin: 0; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #4bd9ff, #1970c5 60%, #0b356f);
+  font-family: Fredoka, system-ui, sans-serif;
+}
+.game-shell { width: min(960px, 100vw); padding: 18px 18px 10px; position: relative; }
+.hud { height: 58px; display: flex; justify-content: space-between; padding: 7px 18px 0; color: #fff; text-shadow: 2px 3px #0a407c; }
+.hud div { display: grid; gap: 1px; text-align: center; letter-spacing: 1px; }
+.hud span { font: 10px 'Press Start 2P', monospace; }
+.hud strong { font: 700 23px Fredoka, sans-serif; color: #ffed4f; }
+canvas { display: block; width: 100%; height: auto; border: 6px solid #fff; border-radius: 18px; box-shadow: 0 12px 0 #0d4382, 0 23px 40px #06275d99; image-rendering: pixelated; }
+.controls { display: none; justify-content: space-between; align-items: center; margin: 17px 4px 0; }
+.control-group { display: flex; gap: 12px; }
+button { border: 0; border-radius: 14px; background: #ffcc36; color: #603100; box-shadow: 0 5px 0 #bd7412; font: 700 20px Fredoka, sans-serif; cursor: pointer; transition: transform .1s; }
+button:active { transform: translateY(4px); box-shadow: 0 1px 0 #bd7412; }
+.controls button { width: 62px; height: 54px; font-size: 27px; }
+.controls .jump { width: 88px; font-size: 15px; }
+.hint { text-align: center; color: #e5f8ff; margin: 16px 0 0; font-size: 14px; }
+.music-toggle { display: block; margin: 13px auto 0; padding: 8px 14px; border-radius: 10px; font-size: 14px; }
+kbd { background: #104c8c; border-radius: 4px; padding: 2px 4px; }
+.overlay { position: fixed; inset: 0; display: grid; place-items: center; background: #06265f88; backdrop-filter: blur(3px); z-index: 2; }
+.overlay.hidden { display: none; }
+.card { width: min(420px, calc(100vw - 42px)); padding: 34px 38px 31px; text-align: center; color: #103c72; background: #fff8df; border: 6px solid #fff; border-radius: 25px; box-shadow: 0 10px 0 #0a3972, 0 20px 45px #001d4e99; }
+.eyebrow { color: #ed7941; font: 10px 'Press Start 2P', monospace; }
+h1 { margin: 16px 0 11px; font-size: 32px; line-height: 1; }
+.card p:not(.eyebrow) { color: #47719a; margin-bottom: 24px; font-size: 18px; }
+#start { min-width: 150px; padding: 14px 24px; }
+@media (max-width: 680px), (pointer: coarse) { .controls { display: flex; } .hint { display: none; } .game-shell { padding: 8px 8px 4px; } .hud { height: 51px; padding: 4px 10px 0; } .hud strong { font-size: 20px; } .hud span { font-size: 8px; } canvas { border-width: 4px; border-radius: 12px; } }
